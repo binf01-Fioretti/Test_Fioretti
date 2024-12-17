@@ -4,6 +4,8 @@
  */
 package test_fioretti;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Daniele
@@ -14,7 +16,18 @@ public class Test_Fioretti {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+            Scanner in = new Scanner(System.in);
+            System.out.println("Digita un numero");
+            String line = in.next();
+            int intValue = 0;
+            try{
+            intValue = Integer.parseInt(line);
+            }catch(NumberFormatException e){
+                e.printStackTrace();
+            }
+            
+            System.out.println("Valore : " + intValue);
+        }
     }
     
-}
+
